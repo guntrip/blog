@@ -1,0 +1,11 @@
+<div class="post">
+  <h1><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
+  {{ post.title }}
+  </a></h1>
+  <div class="info">{{ post.date | date: "%d %B %Y" }}
+    {% for category in post.categories %}
+       <a href="{{ site.baseurl }}/topics/{{ category }}/" class="topic">{{ category }}</a>
+   {% endfor %}
+  </div>
+  <div>{{ post.content | truncatewords: 350 }}</div>
+</div>

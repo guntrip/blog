@@ -1,0 +1,8 @@
+---
+layout: blog
+---
+<h1>{{ page.topic }}</h1>
+
+{% for post in site.categories[page.topic] %}
+  {% include post.html %}
+{% endfor %}

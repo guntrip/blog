@@ -1,20 +1,13 @@
 ---
-layout: default
+layout: blog
 ---
+{% assign tab = 'blog' %}
+{% assign colour = 'purple' %}
+
 <div class="blog">
 
 {% for post in paginator.posts %}
- <div class="post">
-   <h1><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
-   {{ post.title }}
-   </a></h1>
-   <div class="info">{{ post.date | date: "%d %B %Y" }}
-     {% for category in post.categories %}
-        <a href="{{ site.baseurl }}/topics/{{ category }}/" class="topic">{{ category }}</a>
-    {% endfor %}
-   </div>
-   <div>{{ post.content | truncatewords: 350 }}</div>
- </div>
+ {% include post.html %}
 {% endfor %}
 
 
@@ -34,22 +27,5 @@ layout: default
 
 </div>
 
-<div class="home">
 
-  <h1 class="page-heading">Posts</h1>
-
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title | escape }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
-</div>
+<p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>

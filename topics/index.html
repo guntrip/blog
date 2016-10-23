@@ -1,0 +1,7 @@
+---
+layout: default
+---
+Hello :C
+{% assign cat_url = page.permalink | split: "/" %}
+{% assign cat = cat_url[1] %}
+<h1>{{ cat }}</h1>
