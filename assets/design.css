@@ -77,6 +77,10 @@ h1>div>a.logo {
 }
 h1>div>a.logo:hover { border-bottom:none; }
 
+h3 {
+	font-size:0.8em;
+}
+
 a.logo>span {
 
 	padding:3px 0px;
