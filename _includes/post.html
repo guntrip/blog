@@ -5,7 +5,7 @@
   <div class="info">{{ post.date | date: "%d %B %Y" }}
     {% for category in post.categories %}
        <a href="{{ site.baseurl }}/topics/{{ category }}/" class="topic">{{ category }}</a>
-   {% endfor %}
+    {% endfor %}
   </div>
   <div>{{ post.content | truncatewords: 350 }}</div>
 </div>

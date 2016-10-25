@@ -26,9 +26,9 @@ layout: blog
 <div class="sidebar">
  <h2>Hello</h2>
  {% include intro.html %}
- <h2>Topics</h2>
+ <h2 class="gap">Topics</h2>
  {% include topiclist.html %}
- <h2><a href="{{ site.baseurl }}/archives/">Archives</a></h2>
+ <a href="{{ site.baseurl }}/archives/" class="archives"><h2 class="gap">Archives</h2></a>
 </div>
 
 <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
