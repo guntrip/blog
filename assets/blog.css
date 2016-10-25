@@ -25,6 +25,18 @@
 	font-weight:bold;
 }
 
+.sidebar h2.gap {
+	margin-top:8px;
+}
+
+.sidebar a.archives {
+	text-decoration: none;
+	color:#000;
+}
+.sidebar a.archives:hover {
+	text-decoration: underline;
+}
+
 .sidebar a.tag {
 	display:inline-block;
 	margin:2px;
@@ -89,4 +101,9 @@ hr.divide {
 	line-height:1.55;
 	max-width:37em;
 	color:#3e3e3e;;
+}
+
+.post img {
+    height: auto;
+    max-width: 100%;
 }
