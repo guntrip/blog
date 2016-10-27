@@ -1,3 +1,7 @@
+{% if page.url == "/contact/" %}
+  {% assign tab = 'contact' %}
+  {% assign colour = 'green' %}
+{% endif %}
 {% include header.html %}
 {{ content }}
 {% include footer.html %}
