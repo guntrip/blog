@@ -95,6 +95,18 @@ hr.divide {
 	background-color: #cb83f5;
 }
 
+
+.post .info div.readingtime {
+	display:inline-block;
+	margin-left:3px;
+	padding:2px;
+	border-radius: 2px;
+	background-color: #fff;
+	color:#000;
+	text-decoration: none;
+}
+
+
 .post p {
 	/* post content */
 	background-color: inherit;

@@ -1,11 +1,33 @@
+{% assign words = post.content | number_of_words %}
+{% assign minutes = words | divided_by: 200 | plus: 1 %}
 <div class="post">
   <h1><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
   {{ post.title }}
   </a></h1>
   <div class="info">{{ post.date | date: "%d %B %Y" }}
+    <div class="readingtime" title="Reading time">
+      {{ minutes }} minute{% if minutes != 1 %}s{% endif %}
+    </div>
     {% for category in post.categories %}
        <a href="{{ site.baseurl }}/topics/{{ category }}/" class="topic">{{ category }}</a>
     {% endfor %}
   </div>
-  <div>{{ post.content | truncatewords: 350 }}</div>
+  <div>
+  {% if full_post == true %}
+    {{ post.content }}
+  {% else %}
+      {% if post.content contains '<!--break-->' %}
+        {{ post.content | split:'<!--break-->' | first }}
+        <br /><a href="{{ post.url  | prepend: site.baseurl }}">read more</a>
+     {% else %}
+       {% if words > site.break_at %}
+        {{ post.content | truncatewords: site.break_at }}
+        <br /><a href="{{ post.url  | prepend: site.baseurl }}">read more</a>
+       {% else %}
+        {{ post.content }}
+       {% endif %}
+     {% endif %}
+  {% endif %}
+  </div>
 </div>
+<hr class="divide">

@@ -12,7 +12,7 @@ About two years ago I decided to start a project. My [previous projects](http://
 [![Sugar cubes](http://www.steveguntrip.co.uk/wp-content/uploads/2015/05/cubes.jpg)](http://www.steveguntrip.co.uk/wp-content/uploads/2015/05/cubes.jpg)
 
 That’s 23 sugar cubes. Quite a feat. I’ve also been quite unconventional in the materials I’ve tried to get a heaped teaspoon of. Namely, fire:
-<!--breakpost-->
+<!--break-->
 [![Fire](http://www.steveguntrip.co.uk/wp-content/uploads/2015/05/fire.jpg)](http://www.steveguntrip.co.uk/wp-content/uploads/2015/05/fire.jpg)
 
 I did set fire to the floor during this one but it wouldn’t be a challenge if there wasn’t danger.

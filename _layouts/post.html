@@ -1,14 +1,10 @@
 ---
-layout: blog
+layout: default
 ---
-<div class="post">
-  <h1><a class="post-link" href="{{ page.url | prepend: site.baseurl }}">
-  {{ page.title }}
-  </a></h1>
-  <div class="info">{{ page.date | date: "%d %B %Y" }}
-    {% for category in page.categories %}
-       <a href="{{ site.baseurl }}/topics/{{ category }}/" class="topic">{{ category }}</a>
-   {% endfor %}
-  </div>
-  <div>{{ content }}</div>
-</div>
+{% comment %}
+Uses the post.html include but sets full_post to true to stop automatic
+truncating and assigns post to page, as Jekyll puts the contents there.
+{% endcomment %}
+{% assign full_post = true %}
+{% assign post = page %}
+{% include post.html %}

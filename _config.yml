@@ -26,6 +26,7 @@ github_username:  stevecat
 paginate: 5
 paginate_path: "/page:num/"
 permalink: "/:year/:month/:slug/"
+break_at: 200 # how many words to break a post at
 
 # Helpers
 blog_images_path: "/assets/images/blog/"
