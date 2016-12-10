@@ -81,6 +81,7 @@ hr.divide {
 }
 
 .post .info {
+	margin-top: 2px;
 	margin-bottom:6px;
 	font-size:0.75em;
 	font-weight:normal;
