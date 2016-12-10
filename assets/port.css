@@ -1,0 +1,50 @@
+div.photoTitle {
+  font-size:1.4em;
+  margin: 15px 0px;
+}
+div.photoSub {
+  font-size:0.95em;
+  width:600px;
+  margin: 15px 0px;
+}
+div.port {
+	margin:0px 0px 50px 0px;
+	font-size:0.95em;
+}
+div.port p {
+	text-align:left;
+	margin:10px 0px 50px 0px;
+  width:90%;
+}
+div.port p img {
+	width:100%;
+}
+div.port p span {
+	text-align:center;
+	display:block;
+	/*width:75%;*/
+	margin-top:6px;
+	font-style:italic;
+	font-size:0.85em;
+}
+
+a.portLink {
+  display:inline-block;
+  position:relative;
+  height:300px;
+  width:300px;
+  background-size: cover;
+  margin:15px;
+  color:#fff;
+}
+
+a.portLink div {
+  position:absolute;
+  bottom:10px;
+  width:100%;
+  text-align:center;
+  text-decoration: none;
+  font-size: 1.2em;
+  font-color:#fff;
+  text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+}

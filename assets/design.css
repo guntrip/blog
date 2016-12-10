@@ -232,15 +232,16 @@ div.port {
 	font-size:0.95em;
 }
 
-.aflogo {
-	background-image: url('graphics/aflogo.png');
-	background-repeat:no-repeat;
-	background-size: 200px 200px;
-	width:200px;
-	height:200px;
-	display:block;
-	float:left;
-	margin: 0px 10px 10px 0px;
+a.bigLink {
+	font-size:1.3em;
+	font-weight:bold;
+	text-decoration: none;
+	margin-bottom:4px;
+	color:#000;
+}
+
+a.bigLink:hover {
+	text-decoration: underline;
 }
 
 /* site responsive ------------------------------------------------- */

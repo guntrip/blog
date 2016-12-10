@@ -1,0 +1,31 @@
+---
+layout: default
+galleries:
+  - title: Phobophobia
+    link: phobophobia
+    image: phobophobia/fear_tinfoil.jpg
+  - title: Portraiture
+    link: portraiture
+    image: portraiture/image039.JPG
+  - title: Dome
+    link: dome
+    image: dome/dome006.jpg
+  - title: Miscellaneous
+    link: miscellaneous
+    image: miscellaneous/hor8.jpg
+---
+
+<div class=photoSub>
+  I'm interested in documentary style photography and narratives, I especially enjoy making books.
+  I graduated with a BA (Hons) Photography degree from The Arts Institute Bournemouth (AUCB) in 2008.
+</div>
+
+<div class=photoSub style="margin-bottom:0">
+  This is some of my work:
+</div>
+
+{% for gallery in page.galleries %}
+  <a href="{{ site.baseurl }}/photography/{{ gallery.link }}/" class="portLink" style="background-image:url('{{ site.baseurl }}{{ site.photos_images_path }}/{{ gallery.image }}')";>
+    <div>{{ gallery.title }}</div>
+  </a>
+{% endfor %}

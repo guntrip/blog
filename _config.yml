@@ -30,6 +30,8 @@ break_at: 200 # how many words to break a post at
 
 # Helpers
 blog_images_path: "/assets/images/blog/"
+photos_images_path: "/assets/images/photography/"
+images_path: "/assets/images/"
 
 # Build settings
 markdown: kramdown

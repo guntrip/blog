@@ -17,7 +17,7 @@ layout: blog
     {% if paginator.next_page %}
       <a href="{{ paginator.next_page_path | prepend: site.baseurl }}" class="next">Next</a>
     {% else %}
-      <span class="next ">Next</span>
+      <span class="next">Next</span>
     {% endif %}
   </div>
 
@@ -29,6 +29,5 @@ layout: blog
  <h2 class="gap">Topics</h2>
  {% include topiclist.html %}
  <a href="{{ site.baseurl }}/archives/" class="archives"><h2 class="gap">Archives</h2></a>
+ <h2><a href="{{ "/feed.xml" | prepend: site.baseurl }}" class="archives">RSS</a></h2>
 </div>
-
-<p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>

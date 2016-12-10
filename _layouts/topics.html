@@ -1,8 +1,21 @@
 ---
 layout: blog
 ---
-<h1>{{ page.topic }}</h1>
+{% comment %} No pagnination on topics, it could get gnarly... {% endcomment %}
+<div class="blog">
+
+<div  class="topicHeader">{{ site.categories[page.topic].size }} post{% if site.categories[page.topic].size > 1 %}s{% endif %} with the <strong>{{ page.topic }}</strong> topic:</div>
 
 {% for post in site.categories[page.topic] %}
   {% include post.html %}
 {% endfor %}
+
+</div>
+
+<div class="sidebar">
+ <h2>Hello</h2>
+ {% include intro.html %}
+ <h2 class="gap">Topics</h2>
+ {% include topiclist.html %}
+ <a href="{{ site.baseurl }}/archives/" class="archives"><h2 class="gap">Archives</h2></a>
+</div>

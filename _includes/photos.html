@@ -1,0 +1,15 @@
+<div class="port">
+
+{% for photo in page.photos %}
+  <p>
+    <img src="{{ site.baseurl }}{{ site.photos_images_path }}{{ page.photosFolder}}/{{ photo.file }}">
+    {% if page.photosShowTitle %}
+    <span>
+      {{ photo.title }}
+    </span>
+    {% endif %}
+  </p>
+
+{% endfor %}
+
+</div>
