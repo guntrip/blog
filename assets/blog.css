@@ -86,17 +86,19 @@ hr.divide {
 	font-weight:normal;
 }
 
-.post .info a.topic {
+.post .info a.topic, .archives a.topic {
 	display:inline-block;
 	margin-left:3px;
 	padding:2px;
 	border-radius: 2px;
 	background-color: #d3c5da;
 	color:#000;
-	text-decoration: none;
+	text-decoration: none !important;
 }
 
-.post .info a.topic:hover {
+.archives a.topic {font-size:0.75em;}
+
+.post .info a.topic:hover, .archives a.topic:hover {
 	background-color: #cb83f5;
 }
 
@@ -131,4 +133,13 @@ hr.divide {
 	padding-bottom:6px;
 	margin-bottom:6px;
 	border-bottom: 2px dashed #e6e3e7;
+}
+
+.archives a {
+	color:#000;
+	text-decoration: none;
+}
+
+.archives a:hover {
+	text-decoration: underline;
 }

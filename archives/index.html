@@ -2,6 +2,7 @@
 layout: blog
 ---
 <h3>Archives</h3>
+<div class="archives">
 {% for post in site.posts %}
    {% unless post.next %}
      <h4>{{ post.date | date: '%B %Y' }}</h4>
@@ -12,5 +13,10 @@ layout: blog
        <h4>{{ post.date | date: '%B %Y' }}</h4>
      {% endif %}
    {% endunless %}
-   <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a><br />
+   <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+     {% for category in post.categories %}
+        <a href="{{ site.baseurl }}/topics/{{ category }}/" class="topic">{{ category }}</a>
+     {% endfor %}
+   <br />
 {% endfor %}
+</div>
