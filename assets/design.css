@@ -269,6 +269,14 @@ a.bigLink:hover {
 	margin:auto;
 	}
 
+	div.blog {
+		width:100%;
+	}
+
+	div.photoSub {
+		width:100%;
+	}
+
 }
 
 @media all and (max-width: 640px) {
