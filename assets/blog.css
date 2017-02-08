@@ -61,8 +61,8 @@
 hr.divide {
 	height:2px;
 	border:none;
-    border-bottom: 2px solid #e6e3e7;
-    width:60%;
+  border-bottom: 2px solid #e6e3e7;
+  width:60%;
 }
 
 .post h1 {
@@ -87,7 +87,7 @@ hr.divide {
 	font-weight:normal;
 }
 
-.post .info a.topic, .archives a.topic {
+.post .info a.topic, .archives a.topic, .project a.topic {
 	display:inline-block;
 	margin-left:3px;
 	padding:2px;
@@ -97,12 +97,11 @@ hr.divide {
 	text-decoration: none !important;
 }
 
-.archives a.topic {font-size:0.75em;}
+.archives a.topic, .project a.topic {font-size:0.75em; font-weight:normal;}
 
-.post .info a.topic:hover, .archives a.topic:hover {
+.post .info a.topic:hover, .archives a.topic:hover, .project a.topic:hover {
 	background-color: #cb83f5;
 }
-
 
 .post .info div.readingtime {
 	display:inline-block;
@@ -112,6 +111,20 @@ hr.divide {
 	background-color: #fff;
 	color:#000;
 	text-decoration: none;
+}
+
+.post .info a.projectlink, .project a.projectlink {
+	display:inline-block;
+	margin-left:3px;
+	padding:2px;
+	border-radius: 2px;
+	background-color: #5f4e71;
+	color:#fff;
+	text-decoration: none !important;
+}
+
+.post .info a.projectlink:hover {
+	background-color: #3e2e4e;
 }
 
 .post p {

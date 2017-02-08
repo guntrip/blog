@@ -1,5 +1,8 @@
 {% assign tab = 'blog' %}
 {% assign colour = 'purple' %}
+{% if page.categories contains "projects" %}
+  {% assign tab = 'projects' %}
+{% endif %}
 {% include header.html %}
 {{ content }}
 {% include footer.html %}

@@ -2,21 +2,16 @@
 {% assign urlSplit = page.url | split: '/' %}
 {% if urlSplit[1] == "about" %}
   {% assign tab = 'about' %}
-  {% assign colour = 'green' %}
+  {% assign colour = 'purple' %}
 {% endif %}
 {% if urlSplit[1] == "photography" %}
   {% assign tab = 'photography' %}
   {% assign colour = 'mono' %}
 {% endif %}
-{% if urlSplit[1] == "web" %}
-  {% assign tab = 'web' %}
-  {% assign colour = 'blue' %}
-{% endif %}
 {% if urlSplit[1] == "projects" %}
   {% assign tab = 'projects' %}
-  {% assign colour = 'orange' %}
+  {% assign colour = 'purple' %}
 {% endif %}
-
 {% include header.html %}
 {{ content }}
 {% include footer.html %}

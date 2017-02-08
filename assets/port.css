@@ -1,3 +1,71 @@
+/* projects */
+ul.projects {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  clear:both;
+}
+
+ul.projects li {
+  padding-top:15px;
+  clear:both;
+}
+
+ul.projects li div.image {
+  float: left;
+  width:200px;
+  height:200px;
+  vertical-align: middle;
+  overflow:hidden;
+}
+
+  ul.projects li  div.image img {
+    width:200px;
+    height:auto;
+  }
+
+ul.projects li div.project {
+  float:left;
+  padding-left: 10px;
+  width:420px;
+}
+
+ul.projects li div.title {
+  font-weight:bold;
+}
+
+ul.projects li  p {
+  /* snippet */
+  margin: 7px 0px;
+}
+
+ul.projects li div.linked {
+  margin-left:10px;
+  padding:5px;
+  width:85%;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  font-size:0.9em;
+}
+
+ul.projects li div.linked div {
+  font-weight:bold;
+  margin-top:-2px;
+  margin-bottom:4px;
+}
+
+ul.projects li div.linked a {
+  margin-left:5px;
+  text-decoration: none;
+  color: #000;
+}
+
+ul.projects li div.linked a:hover {
+  text-decoration: underline;
+}
+
+/* photography */
 div.photoTitle {
   font-size:1.4em;
   margin: 15px 0px;

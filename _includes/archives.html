@@ -1,0 +1,39 @@
+<h3>Blog archives<span style="font-size:0.75em;">
+{% if page.inc_projects %}
+  (including projects)
+{% else %}
+  (<a href="with_projects/">include projects</a>?)
+{% endif %}
+</span></h3>
+<div class="archives">
+{% assign last_date = "" %}
+{% for post in site.posts %}
+
+  {% if post.categories contains "projects" and page.inc_projects == false %}
+    {% assign include_post = false %}
+  {% else %}
+    {% assign include_post = true %}
+  {% endif %}
+
+  {% if include_post == true %}
+
+     {% assign this_date = post.date | date: '%B %Y' %}
+
+     {% if this_date != last_date %}
+        <h4>{{ this_date }}</h4>
+        {% assign last_date = this_date %}
+     {% endif %}
+
+     {% if post.categories contains "projects" %}<strong>Project:</strong> {% endif %}
+     <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+       {% for category in post.categories %}
+          {% unless category == "projects" %}
+          <a href="{{ site.baseurl }}/topics/{{ category }}/" class="topic">{{ category }}</a>
+          {% endunless %}
+       {% endfor %}
+     <br />
+
+   {% endif %}
+
+{% endfor %}
+</div>

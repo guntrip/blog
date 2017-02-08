@@ -1,0 +1,70 @@
+{% if post.project_type == "photography" %}
+  {% assign project_link =  "/photography/" | append: post.project_gallery %}
+{% endif %}
+{% if post.project_type == "self" %}
+  {% assign project_link =  post.url %}
+{% endif %}
+{% if post.project_type == "url" %}
+  {% assign project_link =  post.project_url %}
+{% endif %}
+
+<li>
+  <div class="image">
+    <a href="{{ project_link }}">
+      <img src="{{ site.baseurl }}{{ site.images_path }}projects/{{ post.image }}" border="0">
+    </a>
+  </div>
+  <div class="project">
+    <div class="title"><a href="{{ project_link }}">{{ post.title }}</a>
+      {% if post.project_type == "url" %}&nbsp;<i class="fa fa-external-link" title="External link"></i>{% endif %}
+      {% for category in post.categories %}
+         {%  if category != 'projects' %}
+         <a href="{{ site.baseurl }}/topics/{{ category }}/" class="topic">{{ category }}</a>
+         {% endif %}
+      {% endfor %}
+    </div>
+      <p>{{ post.snippet }}</p>
+    {% if post.linked_posts.size > 0 %}
+      <div class="linked">
+        <div>Related posts:</div>
+        {% assign count = 1 %}
+        {% for linked_post in post.linked_posts %}
+          {% for searchpost in site.posts %}
+            {% assign this_path = searchpost.path | replace: '_posts/blog/', '' %}
+            {% if this_path == linked_post %}
+            {% assign project_link = '' %}
+                {% if full_post == true %}
+                    {% assign project_link = '#post' | append: count %}
+                    {% assign count = count | plus: 1 %}
+                {% else %}
+                    {% assign project_link = searchpost.url | prepend: site.baseurl %}
+                {% endif %}
+              <a href="{{ project_link }}">{{ searchpost.title }}</a><br />
+            {% endif %}
+          {% endfor %}
+        {% endfor %}
+      </div>
+    {% endif %}
+  </div>
+  <div style="clear:both;"></div>
+</li>
+{% if full_post == true and post.content != "" %}
+  <div class="post" style="margin-top:15px">
+    {{ post.content }}
+  </div>
+{% endif %}
+{% if full_post == true and post.linked_posts.size > 0 %}
+{% assign count = 1 %}
+    <div class="blog">
+      {% for linked_post in post.linked_posts %}
+        {% for searchpost in site.posts %}
+          {% assign this_path = searchpost.path | replace: '_posts/blog/', '' %}
+          {% if this_path == linked_post %}
+            {% assign post = searchpost %}
+            {% include post.html projectview=true projectcount=count %}
+            {% assign count = count | plus: 1 %}
+          {% endif %}
+        {% endfor %}
+      {% endfor %}
+    </div>
+{% endif %}

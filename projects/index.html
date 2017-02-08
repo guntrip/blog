@@ -1,7 +1,8 @@
 ---
 layout: default
 ---
-<p style="margin-top:10px;">Occasionally I make things that aren't made of code or photographs. That currently consists of just a book but I hope to grow this section as I remember things.</p>
-
-<a href="{{ site.baseurl }}/projects/falafel/" class="bigLink">Falafel The Cat</a>
-<p>A novella detailing the perilous story of an anxious man trying to find his lost orange cat. Likeness to myself unintentional.</p>
+<ul class=projects>
+{% for post in site.categories['projects'] %}
+  {% include project.html %}
+{% endfor %}
+</ul>
