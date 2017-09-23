@@ -26,7 +26,7 @@
       <p>{{ post.snippet }}</p>
     {% if post.linked_posts.size > 0 %}
       <div class="linked">
-        <div>Related posts:</div>
+        <div>Included posts:</div>
         {% assign count = 1 %}
         {% for linked_post in post.linked_posts %}
           {% for searchpost in site.posts %}
