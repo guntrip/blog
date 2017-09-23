@@ -11,6 +11,10 @@ ul.projects li {
   clear:both;
 }
 
+ul.projects li:first-child {
+  padding-top:0px;
+}
+
 ul.projects li div.image {
   float: left;
   width:200px;

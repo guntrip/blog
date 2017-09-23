@@ -6,7 +6,7 @@ body {
 	padding:0;
 
 	font-family: 'Bitter', serif;
-	font-size:16px;
+	font-size:14px;
 
 }
 
@@ -16,7 +16,7 @@ body.purple {background-color: #f3f3f3;}
 
 h1 {
 
-	font-size:1.2em;
+	font-size:1.3em;
 	font-weight:normal;
 
 	margin:0;
@@ -148,8 +148,7 @@ h2>div>a.first {
 
 	margin:auto;
 	width:890px;
-
-	/*padding:5px 0px;*/
+	padding:10px 0px;
 
 }
 
