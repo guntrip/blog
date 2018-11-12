@@ -1,6 +1,6 @@
 ## Stevecat's Jekyll Blog
 
-I've had a lot of fun with this and in the process, made it rather complicated.
+I've had a lot of fun with this and in the process, made it rather complicated. Eek.
 
 ### Topics
 

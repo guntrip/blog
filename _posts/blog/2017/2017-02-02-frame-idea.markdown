@@ -15,7 +15,9 @@ The proper e-ink developer kits start around $1000. I looked into jail-breaking 
 
 I eventually stumbled upon a company called Pervasive Displays, they were mentioned in a forum post about a tiny screen someone had included in a project. After further digging, I found a 7.4" 1-bit screen that I could get hold of for about $150.<!--break-->
 
-Once it completed its journey from the US, I encountered my first problem almost immediately. I had to connect the screen to the driver board, with a thin ribbon cable, into a connector I had never seen before. After jabbing at it for nearly a whole afternoon, I discovered it was hinged and clamped the cable in place. It would have been possible to communicate directly with the screen but I feared that may have been a leap too far for me, instead, I purchased an additional board (the USB2TCM Interface) which allows the screen to mount as a USB drive. In this case, a single file, in its strange proprietary format (we'll get into that later), would be sent to the screen. I tested this with an octocat:
+Once it completed its journey from the US, I encountered my first problem almost immediately. I had to connect the screen to the driver board, with a thin ribbon cable, into a connector I had never seen before. After jabbing at it for nearly a whole afternoon, I discovered it was hinged and clamped the cable in place.
+
+It would have been possible to communicate directly with the screen but I feared that may have been a leap too far for me, instead, I purchased an additional board (the USB2TCM Interface) which allows the screen to mount as a USB drive. In this case, a single file, in its strange proprietary format (we'll get into that later), would be sent to the screen. I tested this with an octocat:
 
 ![Screen success](/assets/images/blog/frame/frame1.jpg)
 
