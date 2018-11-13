@@ -17,9 +17,6 @@
       <div class="readingtime" title="Reading time">
         {{ minutes }} minute{% if minutes != 1 %}s{% endif %}
       </div>
-      {% for category in post.categories %}
-         <a href="{{ site.baseurl }}/topics/{{ category }}/" class="topic">{{ category }}</a>
-      {% endfor %}
       {% for searchpost in site.posts %}
         {% if searchpost.categories contains "projects" %}
         {% assign this_path = post.path | replace: '_posts/blog/', '' %}

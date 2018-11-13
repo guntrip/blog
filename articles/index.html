@@ -1,0 +1,17 @@
+---
+layout: default
+---
+<ul class=articles>
+{% for post in site.categories['articles'] %}
+  {% assign words = post.content | number_of_words %}
+  {% assign minutes = words | divided_by: 200 | plus: 1 %}
+  <li class="post">
+  	<h1><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h1>
+  	 <div class="info">{{ post.date | date: "%d %B %Y" }}
+      <div class="readingtime" title="Reading time">
+        {{ minutes }} minute{% if minutes != 1 %}s{% endif %}
+      </div>
+     </div>
+  </li>
+{% endfor %}
+</ul>

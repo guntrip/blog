@@ -12,6 +12,10 @@
   {% assign tab = 'projects' %}
   {% assign colour = 'purple' %}
 {% endif %}
+{% if urlSplit[1] == "articles" %}
+  {% assign tab = 'articles' %}
+  {% assign colour = 'purple' %}
+{% endif %}
 {% include header.html %}
 {{ content }}
 {% include footer.html %}
