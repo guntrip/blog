@@ -1,3 +1,9 @@
+{% comment %}
+Included either by Jekyll's normal _layouts/post.html or my _includes/project.html.
+Outputs either a single blog post or, if we're looking at a project, includes _includes/project.html
+instead. That file then uses this again to output individual posts inside that project.
+{% endcomment %}
+
 {% if post.categories contains "projects" %} 
     {% include project.html %}
 {% else %}

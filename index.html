@@ -1,33 +1,24 @@
 ---
-layout: blog
+layout: default
 ---
-<div class="blog">
-
-{% for post in paginator.posts %}
- {% include post.html %}
+{% assign count =  0 %}
+<ul class=projects>
+{% for post in site.categories['projects'] %}  
+    {% if post.project_type == "photography" %}
+  {% assign project_link =  "/photography/" | append: post.project_gallery %}
+  {% endif %}
+  {% if post.project_type == "self" %}
+    {% assign project_link =  post.url %}
+  {% endif %}
+  {% if post.project_type == "url" %}
+    {% assign project_link =  post.project_url %}
+  {% endif %}
+  <li class="{% cycle 'left', 'right' %}">
+    <a class="image" href="{{ project_link }}" style="background-image: url('{{ site.baseurl }}{{ site.images_path }}projects/{{ post.image }}')"></a>
+    <div class="info">
+      <div class="title"><a href="{{ project_link }}">{{ post.title }}</a></div>
+      {{ post.snippet }}
+    </div>
+  </li>
 {% endfor %}
-
-  <div class="pagination">
-    {% if paginator.previous_page %}
-      <a href="{{ paginator.previous_page_path | prepend: site.baseurl }}" class="previous">Previous</a>
-    {% else %}
-      <span class="previous">Previous</span>
-    {% endif %}
-    <span class="page_number ">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
-    {% if paginator.next_page %}
-      <a href="{{ paginator.next_page_path | prepend: site.baseurl }}" class="next">Next</a>
-    {% else %}
-      <span class="next">Next</span>
-    {% endif %}
-  </div>
-
-</div>
-
-<div class="sidebar">
- <h2>Hello</h2>
- {% include intro.html %}
- <h2 class="gap">Topics</h2>
- {% include topiclist.html %}
- <a href="{{ site.baseurl }}/archives/" class="archives"><h2 class="gap">Archives</h2></a>
- <h2><a href="{{ "/feed.xml" | prepend: site.baseurl }}" class="archives">RSS</a></h2>
-</div>
+</ul>

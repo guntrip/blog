@@ -2,8 +2,9 @@
 layout: blog
 ---
 {% comment %}
-Uses the post.html include but sets full_post to true to stop automatic
-truncating and assigns post to page, as Jekyll puts the contents there.
+Jekyll will include this whenever someone visits a post URL (/2018-01/blah), so we'll just
+include _includes/post.html here. That keeps it all in one file. This assigns "page" to "post", 
+as Jekyll puts the contents in "page" but we use "post" elsewhere.
 {% endcomment %}
 {% assign full_post = true %}
 {% assign post = page %}

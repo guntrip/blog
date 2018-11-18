@@ -1,4 +1,7 @@
-{% comment %} Figure out tabs and colours {% endcomment %}
+{% comment %} Figure out tabs and colours. Default / first. {% endcomment %}
+{% assign tab = 'projects' %}
+{% assign colour = 'purple' %}
+
 {% assign urlSplit = page.url | split: '/' %}
 {% if urlSplit[1] == "about" %}
   {% assign tab = 'about' %}
