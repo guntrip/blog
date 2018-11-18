@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "The internet bought me a cuddly dinosaur"
-categories: silly stories
+categories: silly stories articles
 ---
 Many moons ago, I was at the seaside amusements in my hometown of Bournemouth (UK). There was a grabber machine and inside was the most glorious thing I’d ever seen:
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "How I tried to get a horse nominated for a BRIT award and ended up on Page Three"
-categories: stories
+categories: stories articles
 ---
 I thought I would tell a story about a time I did something very silly and got to watch it blow up beyond all comprehension. At the time I was very worried about either the subject, his fans or the press hounding me so I removed my connection to it. Today I reveal that I am in fact, _Stevie Wotsit_.
 

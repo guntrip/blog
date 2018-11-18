@@ -1,15 +1,27 @@
-{% comment %} Figure out tabs and colours {% endcomment %}
+{% comment %} Figure out tabs and colours. Default / first. {% endcomment %}
+{% assign tab = 'projects' %}
+{% assign colour = 'purple' %}
+
 {% assign urlSplit = page.url | split: '/' %}
 {% if urlSplit[1] == "about" %}
   {% assign tab = 'about' %}
   {% assign colour = 'purple' %}
+  {% assign pagetitle = ' - about' %}
 {% endif %}
 {% if urlSplit[1] == "photography" %}
   {% assign tab = 'photography' %}
   {% assign colour = 'mono' %}
+  {% assign pagetitle = ' - photography' %}
+  {% if urlSplit[2] != "" %}
+  	{% assign pagetitle = pagetitle | append: ' - ' | append: urlSplit[2] %}
+  {% endif %}
 {% endif %}
 {% if urlSplit[1] == "projects" %}
   {% assign tab = 'projects' %}
+  {% assign colour = 'purple' %}
+{% endif %}
+{% if urlSplit[1] == "posts" %}
+  {% assign tab = 'posts' %}
   {% assign colour = 'purple' %}
 {% endif %}
 {% include header.html %}

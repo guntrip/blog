@@ -169,3 +169,13 @@ hr.divide {
 .archives a:hover {
 	text-decoration: underline;
 }
+
+ul.articles {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+ul.articles li {
+	margin-bottom: 15px;
+}

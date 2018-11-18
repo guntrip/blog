@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "End Of The World Notification Service"
-categories: silly projects
+categories: silly
 snippet: "Alerts you when someone has prophesied the world ending, as featured in The Telegraph."
 image: "eotw.png"
 project_type: "url"

@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "A dog show in my little garden"
-categories: silly
+categories: silly articles
 ---
 ![Dinosaur]({{ site.baseurl }}{{ site.blog_images_path }}dogshow1.jpg)
 

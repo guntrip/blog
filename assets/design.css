@@ -35,7 +35,7 @@ h1.nosub {
 h1>div, h2>div {
 
 	margin:auto;
-	width:890px;
+	width:680px;
 
 }
 
@@ -146,8 +146,8 @@ h2>div>a.first {
 
 .content {
 
-	margin:auto;
-	width:890px;
+	margin:auto;			
+	width:680px;
 	padding:10px 0px;
 
 }

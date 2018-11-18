@@ -1,10 +1,11 @@
-{% if post.categories contains "projects" %}
-  {% if post.show_on_blog == true or full_post == true or layout.topic_view == true %}
-    <ul class="projects">
+{% comment %}
+Included either by Jekyll's normal _layouts/post.html or my _includes/project.html.
+Outputs either a single blog post or, if we're looking at a project, includes _includes/project.html
+instead. That file then uses this again to output individual posts inside that project.
+{% endcomment %}
+
+{% if post.categories contains "projects" %} 
     {% include project.html %}
-    </ul>
-  <hr class="divide">
-  {% endif %}
 {% else %}
   {% assign words = post.content | number_of_words %}
   {% assign minutes = words | divided_by: 200 | plus: 1 %}
@@ -17,44 +18,13 @@
       <div class="readingtime" title="Reading time">
         {{ minutes }} minute{% if minutes != 1 %}s{% endif %}
       </div>
-      {% for category in post.categories %}
-         <a href="{{ site.baseurl }}/topics/{{ category }}/" class="topic">{{ category }}</a>
-      {% endfor %}
-      {% for searchpost in site.posts %}
-        {% if searchpost.categories contains "projects" %}
-        {% assign this_path = post.path | replace: '_posts/blog/', '' %}
-          {% if searchpost.linked_posts.size > 0 %}
-            {% for linked_post in searchpost.linked_posts %}
-              {% if this_path == linked_post %}
-                <a class="projectlink" href="{{  searchpost.url | prepend: site.baseurl }}">
-                Project: <b>{{ searchpost.title }}</b>
-                </a>
-              {% endif %}
-            {% endfor %}
-          {% endif %}
-        {% endif %}
-      {% endfor %}
     </div>
     <div>
-    {% if full_post == true %}
-      {% if include.projectview %}
-        {{ post.content | markdownify }}
-      {% else %}
-        {{ post.content }}
-      {% endif %}
+    {% if include.projectview %}
+      {{ post.content | markdownify }}
     {% else %}
-        {% if post.content contains '<!--break-->' %}
-          {{ post.content | split:'<!--break-->' | first }}
-          <br /><a href="{{ post.url  | prepend: site.baseurl }}">read more</a>
-       {% else %}
-         {% if words > site.break_at %}
-          {{ post.content | truncatewords: site.break_at }}
-          <br /><a href="{{ post.url  | prepend: site.baseurl }}">read more</a>
-         {% else %}
-          {{ post.content }}
-         {% endif %}
-       {% endif %}
-    {% endif %}
+      {{ post.content }}
+    {% endif %}   
     </div>
   </div>
   <hr class="divide">
