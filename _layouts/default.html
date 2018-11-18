@@ -6,10 +6,15 @@
 {% if urlSplit[1] == "about" %}
   {% assign tab = 'about' %}
   {% assign colour = 'purple' %}
+  {% assign pagetitle = ' - about' %}
 {% endif %}
 {% if urlSplit[1] == "photography" %}
   {% assign tab = 'photography' %}
   {% assign colour = 'mono' %}
+  {% assign pagetitle = ' - photography' %}
+  {% if urlSplit[2] != "" %}
+  	{% assign pagetitle = pagetitle | append: ' - ' | append: urlSplit[2] %}
+  {% endif %}
 {% endif %}
 {% if urlSplit[1] == "projects" %}
   {% assign tab = 'projects' %}
