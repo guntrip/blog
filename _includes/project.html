@@ -8,46 +8,43 @@
   {% assign project_link =  post.project_url %}
 {% endif %}
 
-<li>
-  <div class="image">
-    <a href="{{ project_link }}">
-      <img src="{{ site.baseurl }}{{ site.images_path }}projects/{{ post.image }}" border="0">
-    </a>
-  </div>
-  <div class="project">
-    <div class="title"><a href="{{ project_link }}">{{ post.title }}</a>
-      {% if post.project_type == "url" %}&nbsp;<i class="fa fa-external-link" title="External link"></i>{% endif %}
-      {% for category in post.categories %}
-         {%  if category != 'projects' %}
-         <a href="{{ site.baseurl }}/topics/{{ category }}/" class="topic">{{ category }}</a>
-         {% endif %}
-      {% endfor %}
-    </div>
-      <p>{{ post.snippet }}</p>
-    {% if post.linked_posts.size > 0 %}
-      <div class="linked">
-        <div>Included posts:</div>
-        {% assign count = 1 %}
-        {% for linked_post in post.linked_posts %}
-          {% for searchpost in site.posts %}
-            {% assign this_path = searchpost.path | replace: '_posts/blog/', '' %}
-            {% if this_path == linked_post %}
-            {% assign project_link = '' %}
-                {% if full_post == true %}
-                    {% assign project_link = '#post' | append: count %}
-                    {% assign count = count | plus: 1 %}
-                {% else %}
-                    {% assign project_link = searchpost.url | prepend: site.baseurl %}
-                {% endif %}
-              <a href="{{ project_link }}">{{ searchpost.title }}</a><br />
-            {% endif %}
-          {% endfor %}
-        {% endfor %}
+  <ul class="projects">
+    <li class="{% cycle 'left', 'right' %}">
+      <a class="image smaller" style="background-image: url('{{ site.baseurl }}{{ site.images_path }}projects/{{ post.image }}')"></a>
+      <div class="info">
+        <div class="title">Project: <a href="{{ project_link }}">{{ post.title }}</a></div>
+        {{ post.snippet }}
       </div>
-    {% endif %}
-  </div>
-  <div style="clear:both;"></div>
-</li>
+    </li>
+  </ul>
+
+
+  {% if post.linked_posts.size > 0 %}
+    <div id="linked_project_posts">
+      <div>Project contents:</div>
+      {% assign count = 1 %}
+      {% for linked_post in post.linked_posts %}
+        {% for searchpost in site.posts %}
+          {% assign this_path = searchpost.path | replace: '_posts/blog/', '' %}
+          {% if this_path == linked_post %}
+          {% assign project_link = '' %}
+              {% if full_post == true %}
+                  {% assign project_link = '#post' | append: count %}
+                  {% assign count = count | plus: 1 %}
+              {% else %}
+                  {% assign project_link = searchpost.url | prepend: site.baseurl %}
+              {% endif %}
+            <a href="{{ project_link }}">{{ searchpost.title }}</a><br />
+          {% endif %}
+        {% endfor %}
+      {% endfor %}
+      {% if post.contents_extra %}
+        <div class="extra">{{ post.contents_extra }}</div>
+      {% endif %}
+    </div>
+  {% endif %}
+
+
 {% if full_post == true and post.content != "" %}
   <div class="post" style="margin-top:15px">
     {{ post.content }}
